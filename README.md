@@ -34,10 +34,7 @@ All technologies and concepts in these experiments are being used in compliance 
 
 ## Bibliography
 
-1. Thomas Kluyver, Benjamin Ragan-Kelley, Fernando P´erez, Brian Granger, Matthias Bussonnier, Jonathan Frederic, Kyle Kelley, Jessica Hamrick, Jason Grout, Sylvain Corlay,
-Paul Ivanov, Dami´an Avila, Safia Abdalla, and Carol Willing. Jupyter notebooks – a publishing format for reproducible computational workflows. In F. Loizides and B. Schmidt,
-editors, Positioning and Power in Academic Publishing: players, Agents and Agendas,
-pages 87 – 90. IOS Press, 2016.
+1. Ilia Shumailov, Zakhar Shumaylov, Dmitry Kazhdan, Yiren Zhao, Nicolas Papernot, Murat A. Erdogdu, and Ross Anderson. Manipulating sgd with data ordering attacks, 2021.
 2. Dheeru Dua and Casey Graff. UCI machine learning repository. http://archive.ics.uci.edu/ml, 2017.
 3. R. A. Fisher. The iris dataset. https://www.openml.org/d/61, April 2014.
 4. F. Pedregosa, G. Varoquaux, A. Gramfort, V. Michel, B. Thirion, O. Grisel, M. Blon-

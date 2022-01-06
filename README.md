@@ -12,7 +12,7 @@ This repository stores example data poisoning attacks on machine learning. The a
 
 ### Outline
 
-This attack targets models using Stochastic Gradient Descent (SGD) parameter optimisation methods\[1\]. In general, a SGD model can be expressed mathematically as \
+This attack targets models using Stochastic Gradient Descent (SGD) parameter optimisation methods \[1\]. In general, a SGD model can be expressed mathematically as \
 $\theta_{N+1} = \theta_1 - \eta\nabla\hat{L}_1(\theta_1) - \eta\nabla\hat{L}_2(\theta_2) - ... - \eta\nabla\hat{L}_N(\theta_N)$ \
 where $\theta_N$ are the model parameters on training step $N$ within this current epoch, $\eta$ represents the learning rate used in SGD gradient sampling, $\nabla\hat{L}_i(\theta_i)$ is the first derivative of the average loss of data batch $i$ from the model using parameters $\theta_i$. The equation can be further transformed into the form \
 $\theta_{N+1} = \eta\sum_{j=1}^{N}\nabla\hat{L}_j(\theta_1) + \eta^2\sum_{j=1}^{N}\sum_{k < j}\nabla\nabla\hat{L}_j(\theta_1)\nabla\hat{L}_k(\theta_1)+O(N^3\eta^3)$ \
@@ -21,7 +21,7 @@ Note that the coefficient to the $\eta^2$ term is not determinstic as it relies 
 
 ### In this repo
 
-```DataOrderingSGD.ipynb``` is a Jupyter Notebook file demonstration of the attack first on the Abalone Dataset\[2\] (was previously carried out on the Iris Dataset\[3\] until December 2021), using ```scikit-learn```'s ```SGDClassifier``` model\[4\]. There are three models in the experiment:
+```DataOrderingSGD.ipynb``` is a Jupyter Notebook file demonstration of the attack first on the Abalone Dataset \[2\] (was previously carried out on the Iris Dataset \[3\] until December 2021), using ```scikit-learn```'s ```SGDClassifier``` model \[4\]. There are three models in the experiment:
 - a control model which is trained over the data without any adversarial interference to be used later when computing the efficacy of the attack
 - a target model which we assume the attacker only maintains query access to (black-box attack); this model is identical to the control model
 - a surrogate model which the attacker is using to *estimate* the target model; the configuration of this model is not identical to the others

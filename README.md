@@ -14,7 +14,7 @@ This repository stores example data poisoning attacks on machine learning. The a
 
 This attack targets models using Stochastic Gradient Descent (SGD) parameter optimisation methods \[1\]. In general, a SGD model can be expressed mathematically as \
 $\theta_{N+1} = \theta_1 - \eta\nabla\hat{L}_1(\theta_1) - \eta\nabla\hat{L}_2(\theta_2) - ... - \eta\nabla\hat{L}_N(\theta_N)$ \
-where $\theta_N$ are the model parameters on training step $N$ within this current epoch, $\eta$ represents the learning rate used in SGD gradient sampling, $\nabla\hat{L}_i(\theta_i)$ is the first derivative of the average loss of data batch $i$ from the model using parameters $\theta_i$. The equation can be further transformed into the form \
+where $\theta_N$ are the model parameters on training step $N$ within this current epoch, $\eta$ represents the learning rate used in SGD gradient sampling, $\nabla\hat{L}_i(\theta_i)$ is the first derivative of the average loss of data batch $i$ from the model using parameters $\theta_i$. The equation can be further transformed into the form \[5\] \
 $\theta_{N+1} = \eta\sum_{j=1}^{N}\nabla\hat{L}_j(\theta_1) + \eta^2\sum_{j=1}^{N}\sum_{k < j}\nabla\nabla\hat{L}_j(\theta_1)\nabla\hat{L}_k(\theta_1)+O(N^3\eta^3)$ \
 Note that the coefficient to the $\eta^2$ term is not determinstic as it relies on the subset of $k$ data batches that the model has already been trained over in this current epoch. An attacker can exploit this non-determinstic behaviour through adversarial machine learning techniques.
 
@@ -41,3 +41,5 @@ All technologies and concepts in these experiments are being used in compliance 
 del, P. Prettenhofer, R. Weiss, V. Dubourg, J. Vanderplas, A. Passos, D. Cournapeau,
 M. Brucher, M. Perrot, and E. Duchesnay. Scikit-learn: Machine learning in Python.
 Journal of Machine Learning Research, 12:2825–2830, 2011
+5. H. Robbins and S. Monro. A stochastic approximation method. The annals of mathematical statistics, pages
+400–407, 1951
